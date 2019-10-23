@@ -1,0 +1,18 @@
+1) Run Cookie Quick Manager.
+2) Search cookies for local page.
+3) One cookie named I_am_admin appears containing an md5 value.
+4) Value is 68934a3e9455fa72420237eb05902327 which when decrypted means false.
+5) Create a new md5 hash containing true -> b326b5062b2f0e69046810717534cb09.
+6) Replace cookie value with new hash set to true.
+7) Save cookie.
+
+-----
+
+How to avoid ?
+If you want cookies to be protected from sniffing and encrypted:
+- Enforce SSL (HTTPS) and disable HTTP.
+- Set Secure flag on all cookies (tells the user's browser to only send back this cookie over HTTPS connections).
+- Check third party contents are using HTTPS as well.
+
+- Don't store the admin session in a cookie ... 
+

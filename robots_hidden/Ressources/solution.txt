@@ -1,0 +1,15 @@
+In the file robot.txt (see robots_whatever/solution.txt), we see a folder named /.hidden
+
+We discover folders in folders etc and endless README files. (actually 18279)
+
+We made a script in php where we curl each page, get all the folder names and README ;
+
+- in case of folder, call recursively the fonction
+- in case of README, store the text 
+
+You see the result of this storing process in result.txt.
+
+We searched for numbers in this and found the flag.
+
+Don't trust the robots.txt convention !
+Protect access to sensitives folders with .htaccess for example.

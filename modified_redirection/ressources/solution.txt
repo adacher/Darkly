@@ -1,0 +1,9 @@
+1) Copy the link of one of the instagram/facebook/twitter redirection icon.
+2) Copied link is index.php?page=redirect&site=instagram
+3) Change link to index.php?page=redirect&site=admin
+
+----
+
+How to avoid ?
+
+Create a whitelist containing the redirections you want to be allowed.

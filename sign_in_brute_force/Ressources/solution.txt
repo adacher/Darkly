@@ -1,0 +1,15 @@
+On sign in page we see the "sorry wrong answer" so we investigate.
+
+We see the "username" and "password" in the URL of the page in GET method. We found no information to connect.
+So we tried to bruteforce the password with the List of the most common password finded here : 
+https://en.wikipedia.org/wiki/List_of_the_most_common_passwords
+
+We tried with severals years and finally the 2014 contains the password shadow, and we get the flag. 
+
+You can see a little php script that we used to find it.
+
+It can be used to access sensitive data or admin functionalities.
+
+To prevent, you can use a "passSentence" instead of a "passWord "like : 
+"Iateabananathismorning."
+and it's easier to remember.

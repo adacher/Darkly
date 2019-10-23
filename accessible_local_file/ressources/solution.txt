@@ -1,0 +1,11 @@
+1) Try to access root folder of the website.
+2) Notice an alert while trying to access content
+3) Linux servers contain a file storing the password: /etc/passwd
+4) LOCAL_IP/?page=../../../../../../../etc/passwd
+
+----
+
+How to avoid ?
+
+1) Use of an .htaccess to protect folder containing files.
+2) Or make sure nothing critical is accessible in the public directories of the website.

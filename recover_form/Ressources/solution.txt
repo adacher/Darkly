@@ -1,0 +1,9 @@
+On recover password page, we see a strange submit button alone. 
+If we press it we get "sorry wrong answer" so we try to submit something else. 
+If we inspect, we can see that we can change the mail on "value" attribut of input named "mail".
+
+Flag appears.
+
+This form can be used to send mails with a looping script for example.
+
+You can avoid this, just don't use sensitive data in form attributes and do it in back. 

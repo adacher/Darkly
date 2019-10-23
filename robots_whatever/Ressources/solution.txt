@@ -1,0 +1,13 @@
+We check if the site as the robot.txt file. This file is used to tell the search engine wich pages or files it can ask to the site,
+to prevent to many request.
+
+It is there and we see that we have 2 folders, and one of them is /whatever and contains htpassw file with a combination login:pasword :
+root:8621ffdbc5698829397d97767ac13db3
+
+md5 ( 8621ffdbc5698829397d97767ac13db3 ) = dragon
+
+We try to go to http://local_IP/admin/ and use root as login and dragon as password. 
+
+
+Don't trust the robots.txt convention !
+Protect access to sensitives folders with .htaccess for example.
